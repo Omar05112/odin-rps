@@ -40,12 +40,6 @@ function getHumanChoice(){
 
     
 }
-
-
-
-   
-
-
     
 function playGame(){
     
@@ -83,9 +77,9 @@ function playGame(){
     }
 
 
-    for(let roundCount=0; roundCount>4; roundCount++){
-        humanSelection;
-        computerSelection;
+    for(let roundCount=0; roundCount<=4; roundCount++){
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
         playRound(humanSelection, computerSelection);
     }
     if(humanScore>computerScore){
@@ -94,14 +88,8 @@ function playGame(){
     else if (humanScore<computerScore){
         console.log("You lose!");
     }
-        return "Game over!";
-    
+    console.log(`Your final score is ${humanScore} against ${computerScore}`);
+
 }
 
-
-
-
-
-
-console.log(humanSelection);
-console.log(computerSelection);
+playGame();
